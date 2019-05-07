@@ -1,0 +1,22 @@
+#headerRow{
+  margin-bottom: 5%;
+}
+
+h1{
+  font-size:200%;
+  font-family: 'Fjalla One', sans-serif;
+}
+#directions{
+  font-family: 'Noto Sans', sans-serif;
+  width:50%;
+  margin: auto;
+}
+
+#formCol{
+  margin: auto;
+}
+
+.questionText{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 100%;
+}
