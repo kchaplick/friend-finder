@@ -33,4 +33,28 @@ module.exports = function(app) {
     
   });
 
+
+  //
+  app.get("/api/friends/match", function (req, res) {
+
+  
+    var match = {
+      score: 41,
+      name: ""
+    };
+    
+    
+    var currentUserScore = friendData[friendData.length-1].answers.reduce();
+
+    for (var i = 0; i < friendData.length-1; i++){
+      compareMatch = friendData[i].answers.reduce();
+      matchDiff = currentUserScore - compareMatch
+        if(matchDiff < match.score){
+          match.score = matchDiff
+          match.name = friendData[i].name
+        }
+      }
+    console.log(match);  
+  });
+
 }

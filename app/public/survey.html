@@ -226,12 +226,13 @@
 
     });
 
-    // $.ajax({ url: "/api/friends/match", method: "GET" })
-    //             .then(function (data) {
-    //                 $("#match-name").text(`Congratulations! Your closest match is...${data.name}`);
-    //                 $("#match-img").attr("src", data.photo).css("max-width", "100%").addClass("img-responsive");
-    //             });
-    //     });
+    $.ajax({ url: "/api/friends/match", method: "GET" })
+                .then(function (data) {
+                  console.log();
+                    // $("#match-name").text(`Congratulations! Your closest match is...${data.name}`);
+                    // $("#match-img").attr("src", data.photo).css("max-width", "100%").addClass("img-responsive");
+                });
+      
 
   </script>
 </body>
