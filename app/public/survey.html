@@ -8,188 +8,232 @@
   <!-- CSS  -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans|Sofia" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="survey.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="survey.css" type="text/css" rel="stylesheet">
   <title>Document</title>
 </head>
 
 <body>
   <div class="container">
-    <div id="headerRow" class="row">
-      <div class="col s12 center-align">
-        <h1 class="teal-text text-lighten-2">Time to Find Your Match</h1>
-        <p id="directions">Answer the 10 questions below as truthfully as possible. Our algorithm
-          will match your answers with our database of users and return a match!</p>
+    <div class="row">
+      <div class="col-12">
+        <h1>Time to Find Your Match</h1>
+        <p>Answers all ten questions as honestly as possible on a scale from 1 -5, 1 being strongly disagree and 5
+          strongly agree.</p>
       </div>
     </div>
-    <div class="row center-align">
-      <div id="formCol" class="col s12">
-        <form class="col s12">
-
-          <div class="row">
-            <div class="input-field col s8">
-              <select id="questionOne">
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 - Strongly Disagree</option>
-                <option value="2">2 - Disagree</option>
-                <option value="3">3 - Neutral</option>
-                <option value="4">4 - Agree</option>
-                <option value="5">5 - Strongly Agree</option>
-              </select>
-              <label  class="questionText" for="questionOne">Your mind is always buzzing with unexplored ideas and plans. </label>
-            </div>
+    <!--Form start-->
+    <div class="row">
+      <div class="col-sm">
+        <form>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="John Smith">
           </div>
-          <div class="row">
-            <div class="input-field col s8">
-              <select multiple>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 - Strongly Disagree</option>
-                <option value="2">2 - Disagree</option>
-                <option value="3">3 - Neutral</option>
-                <option value="4">4 - Agree</option>
-                <option value="5">5 - Strongly Agree</option>
-              </select>
-              <label class="questionText" for="questionTwo">Generally speaking, you rely more on your experience than your imagination.
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s8">
-              <select multiple>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 - Strongly Disagree</option>
-                <option value="2">2 - Disagree</option>
-                <option value="3">3 - Neutral</option>
-                <option value="4">4 - Agree</option>
-                <option value="5">5 - Strongly Agree</option>
-              </select>
-              <label class="questionText" for="questionThree">You find it easy to stay relaxed and focused even when there is some pressure.
-              </label>
-            </div>
+          <div class="form-group">
+            <label for="photo">Link to your photo</label>
+            <input type="text" class="form-control" id="photo" placeholder="">
           </div>
 
-          <div class="row">
-            <div class="input-field col s8">
-              <select multiple>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 - Strongly Disagree</option>
-                <option value="2">2 - Disagree</option>
-                <option value="3">3 - Neutral</option>
-                <option value="4">4 - Agree</option>
-                <option value="5">5 - Strongly Agree</option>
-              </select>
-              <label class="questionText" for="questionFour">You rarely do something just out of sheer curiosity.
-              </label>
-            </div>
+          <!--questions-->
+          <div class="form-group">
+            <label for="questionOne">
+              Your mind is always buzzing with unexplored ideas and plans.
+            </label>
+            <select class="form-control" id="questionOne">
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2 - Disagree</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4 - Agree</option>
+              <option value="5">5 - Strongly Agree</option>
+            </select>
           </div>
 
-          <div class="row">
-            <div class="input-field col s8">
-              <select multiple>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 - Strongly Disagree</option>
-                <option value="2">2 - Disagree</option>
-                <option value="3">3 - Neutral</option>
-                <option value="4">4 - Agree</option>
-                <option value="5">5 - Strongly Agree</option>
-              </select>
-              <label class="questionText" for="questionFive">People can rarely upset you.
-              </label>
-            </div>
+          <div class="form-group">
+            <label for="questionTwo">
+              You feel more energetic after spending time with a group of people.
+            </label>
+            <select class="form-control" id="questionTwo">
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2 - Disagree</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4 - Agree</option>
+              <option value="5">5 - Strongly Agree</option>
+            </select>
           </div>
 
-          <div class="row">
-            <div class="input-field col s8">
-              <select multiple>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 - Strongly Disagree</option>
-                <option value="2">2 - Disagree</option>
-                <option value="3">3 - Neutral</option>
-                <option value="4">4 - Agree</option>
-                <option value="5">5 - Strongly Agree</option>
-              </select>
-              <label class="questionText" for="questionSix">It is often difficult for you to relate to other people’s feelings.
-              </label>
-            </div>
+          <div class="form-group">
+            <label for="questionThree">
+              Generally speaking, you rely more on your experience than your imagination.
+            </label>
+            <select class="form-control" id="questionThree">
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2 - Disagree</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4 - Agree</option>
+              <option value="5">5 - Strongly Agree</option>
+            </select>
           </div>
 
-          <div class="row">
-            <div class="input-field col s8">
-              <select multiple>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 - Strongly Disagree</option>
-                <option value="2">2 - Disagree</option>
-                <option value="3">3 - Neutral</option>
-                <option value="4">4 - Agree</option>
-                <option value="5">5 - Strongly Agree</option>
-              </select>
-              <label class="questionText" for="questionSeven">In a discussion, truth should be more important than people’s sensitivities.
-              </label>
-            </div>
+          <div class="form-group">
+            <label for="questionFour">
+              You find it easy to stay relaxed and focused even when there is some pressure.
+            </label>
+            <select class="form-control" id="questionFour">
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2 - Disagree</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4 - Agree</option>
+              <option value="5">5 - Strongly Agree</option>
+            </select>
           </div>
 
-          <div class="row">
-            <div class="input-field col s8">
-              <select multiple>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 - Strongly Disagree</option>
-                <option value="2">2 - Disagree</option>
-                <option value="3">3 - Neutral</option>
-                <option value="4">4 - Agree</option>
-                <option value="5">5 - Strongly Agree</option>
-              </select>
-              <label class="questionText" for="questionEight">You rarely get carried away by fantasies and ideas.
-              </label>
-            </div>
+          <div class="form-group">
+            <label for="questionFive">
+              You rarely do something just out of sheer curiosity.
+            </label>
+            <select class="form-control" id="questionFive">
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2 - Disagree</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4 - Agree</option>
+              <option value="5">5 - Strongly Agree</option>
+            </select>
           </div>
-          <div class="row">
-            <div class="input-field col s8">
-              <select multiple>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 - Strongly Disagree</option>
-                <option value="2">2 - Disagree</option>
-                <option value="3">3 - Neutral</option>
-                <option value="4">4 - Agree</option>
-                <option value="5">5 - Strongly Agree</option>
-              </select>
-              <label class="questionText" for="questionNine">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
-              </label>
-            </div>
+
+          <div class="form-group">
+            <label for="questionSix">
+              People can rarely upset you.
+            </label>
+            <select class="form-control" id="questionSix">
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2 - Disagree</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4 - Agree</option>
+              <option value="5">5 - Strongly Agree</option>
+            </select>
           </div>
-          <div class="row">
-            <div class="input-field col s8">
-              <select multiple>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 - Strongly Disagree</option>
-                <option value="2">2 - Disagree</option>
-                <option value="3">3 - Neutral</option>
-                <option value="4">4 - Agree</option>
-                <option value="5">5 - Strongly Agree</option>
-              </select>
-              <label class="questionText" for="questionTen">You feel more energetic after spending time with a group of people.
-              </label>
-            </div>
+
+          <div class="form-group">
+            <label for="questionSeven">
+              It is often difficult for you to relate to other people’s feelings.
+            </label>
+            <select class="form-control" id="questionSeven">
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2 - Disagree</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4 - Agree</option>
+              <option value="5">5 - Strongly Agree</option>
+            </select>
           </div>
+
+          <div class="form-group">
+            <label for="questionEight">
+              In a discussion, truth should be more important than people’s sensitivities.
+            </label>
+            <select class="form-control" id="questionEight">
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2 - Disagree</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4 - Agree</option>
+              <option value="5">5 - Strongly Agree</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="questionNine">
+              You rarely get carried away by fantasies and ideas.
+            </label>
+            <select class="form-control" id="questionNine">
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2 - Disagree</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4 - Agree</option>
+              <option value="5">5 - Strongly Agree</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="questionTen">
+              You think that everyone’s views should be respected regardless of whether they are supported by facts or
+              not.
+            </label>
+            <select class="form-control" id="questionTen">
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2 - Disagree</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4 - Agree</option>
+              <option value="5">5 - Strongly Agree</option>
+            </select>
+          </div>
+          <button class="btn btn-primary submit" type="submit">Submit</button>
+
         </form>
       </div>
     </div>
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('select');
-      var instances = M.FormSelect.init(elems, options);
+  <script type="text/javascript">
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+
+
+
+
+    $(".submit").on("click", function (event) {
+      event.preventDefault();
+
+      // Here we grab the form elements
+      var newFriend = {
+        name: $("#name").val(),
+        photoLink: $("#photo").val(),
+        answers: [
+          parseInt($("#questionOne").val()),
+          parseInt($("#questionTwo").val()),
+          parseInt($("#questionThree").val()),
+          parseInt($("#questionFour").val()),
+          parseInt($("#questionFive").val()),
+          parseInt($("#questionSix").val()),
+          parseInt($("#questionSeven").val()),
+          parseInt($("#questionEight").val()),
+          parseInt($("#questionNine").val()),
+          parseInt($("#questionTen").val())
+        ]
+      };
+
+      console.log(newFriend);
+
+     
+
+      $.post("/api/friends", newFriend,
+        function(data) {
+          console.log(data);
+
+        });
+
     });
 
-    // Or with jQuery
+    // $.ajax({ url: "/api/friends/match", method: "GET" })
+    //             .then(function (data) {
+    //                 $("#match-name").text(`Congratulations! Your closest match is...${data.name}`);
+    //                 $("#match-img").attr("src", data.photo).css("max-width", "100%").addClass("img-responsive");
+    //             });
+    //     });
 
-    $(document).ready(function () {
-      $('select').formSelect();
-    });</script>
+  </script>
 </body>
 
 </html>
