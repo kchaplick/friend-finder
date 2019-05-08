@@ -173,6 +173,28 @@
       </div>
     </div>
 
+    <!-- Modal -->
+<div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="yourMatch" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Your Match</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!--dynamically inserted from ajax-->
+          <img id="matchImage" class="img-fluid" src="">
+          <p id="matchName"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   
@@ -223,15 +245,19 @@
           console.log(data);
 
         });
+      
+        $.ajax({ url: "/api/friends/match", method: "GET" })
+                .then(function (match) {
+                  console.log(match);
+                    $("#matchImage").attr("src", match.photo)
+                    $("#matchName").html(match.name);
+                    $('#matchModal').modal('show');
+
+                });
 
     });
 
-    $.ajax({ url: "/api/friends/match", method: "GET" })
-                .then(function (data) {
-                  console.log();
-                    // $("#match-name").text(`Congratulations! Your closest match is...${data.name}`);
-                    // $("#match-img").attr("src", data.photo).css("max-width", "100%").addClass("img-responsive");
-                });
+   
       
 
   </script>
