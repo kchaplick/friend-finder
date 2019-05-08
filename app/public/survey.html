@@ -26,7 +26,7 @@
     <!--Form start-->
     <div class="row">
       <div class="col-sm">
-        <form>
+        <form id="matchForm">
           <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" class="form-control" id="name" placeholder="John Smith">
@@ -243,7 +243,9 @@
       $.post("/api/friends", newFriend,
         function(data) {
           console.log(data);
-
+          $( '#matchForm' ).each(function(){
+            this.reset();
+            });
         });
       
         $.ajax({ url: "/api/friends/match", method: "GET" })
@@ -254,7 +256,8 @@
                     $('#matchModal').modal('show');
 
                 });
-        this.reset();
+         
+        
     });
 
    
